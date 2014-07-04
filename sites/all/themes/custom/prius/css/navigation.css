@@ -1,0 +1,85 @@
+
+#secondnav .menu {
+    list-style: none;
+    *zoom: 1;
+    background:#aaaaaa;
+}
+#secondnav .menu:before,
+#secondnav .menu:after {
+    content: " ";
+    display: table;
+}
+#secondnav .menu:after {
+    clear: both;
+}
+#secondnav .menu ul {
+    list-style: none;
+    width: 9em;
+}
+#secondnav .menu a {
+    padding: 10px 15px;
+    color:#fff;
+}
+#secondnav .menu li {
+    position: relative;
+}
+#secondnav .menu > li {
+    float: left;
+    border-top: 1px solid #808080;
+}
+#secondnav .menu > li > .parent {
+    background-image: url("images/downArrow.png");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+#secondnav .menu > li > a {
+    display: block;
+}
+#secondnav .menu li  ul {
+    position: absolute;
+    left: -9999px;
+}
+#secondnav .menu > li:hover > ul {
+    left: 0;
+}
+#secondnav .menu li li:hover ul {
+    left: 100%;
+    top: 0;
+}
+#secondnav .menu li li a {
+    display: block;
+    background: #1d7a62;
+    position: relative;
+    z-index:100;
+    border-top: 1px solid #175e4c;
+}
+#secondnav .menu li li li a {
+    background:#249578;
+    z-index:200;
+    border-top: 1px solid #1d7a62;
+}
+
+@media screen and (max-width: 768px) {
+    .active {
+        display: block;
+    }
+    #secondnav .menu > li {
+        float: none;
+    }
+    #secondnav .menu > li > .parent {
+        background-position: 95% 50%;
+    }
+    #secondnav .menu li li .parent {
+        background-image: url("images/downArrow.png");
+        background-repeat: no-repeat;
+        background-position: 95% 50%;
+    }
+    #secondnav .menu ul {
+        display: block;
+        width: 100%;
+    }
+    #secondnav .menu > li:hover > ul , #secondnav .menu li li.hover ul {
+        position: static;
+    }
+
+}

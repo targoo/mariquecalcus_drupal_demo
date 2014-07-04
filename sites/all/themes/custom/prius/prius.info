@@ -1,6 +1,5 @@
 name = prius
 description = A clean, single or multi-column Zen sub-theme.
-screenshot = screenshot.png
 
 ; This theme is compatible with Drupal 7 core and is a Zen sub-theme.
 core = 7.x
@@ -14,7 +13,7 @@ stylesheets[all][] = system.theme.css
 ; Add our stylesheet.
 stylesheets[all][] = css/prius.css
 stylesheets[all][] = css/mariquecalcus.css
-;stylesheets[all][] = css/styles.css
+stylesheets[all][] = css/navigation.css
 
 ; Add our JavaScript.
 scripts[] = js/script.js

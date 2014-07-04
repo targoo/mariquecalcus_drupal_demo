@@ -12,7 +12,7 @@
 
   <header id="header">
     <div class="logo">
-      <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home" id="logo">
+      <a href="/" title="Home" rel="home" id="logo">
       </a>
     </div>
 
@@ -34,33 +34,19 @@
       <a id="mobile-nav" href="#mobile-nav">
         <i class="fa fa-2"></i>
       </a>
-      <a id="mobile-logo" href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home" ></a>
+      <a id="mobile-logo" href="/" title="Home" rel="home" ></a>
     </div>
 
     <main id="main" role="main">
 
       <div id="content-wrapper">
 
-        <?php if ($main_menu): ?>
-          <nav id="" role="navigation" tabindex="-1">
-            <?php
-            // This code snippet is hard to modify. We recommend turning off the
-            // "Main menu" on your sub-theme's settings form, deleting this PHP
-            // code block, and, instead, using the "Menu block" module.
-            // @see https://drupal.org/project/menu_block
-            print theme('links__system_main_menu', array(
-              'links' => $main_menu,
-              'attributes' => array(
-                'class' => array('links', 'inline', 'clearfix'),
-              ),
-              'heading' => array(
-                'text' => t('Main menu'),
-                'level' => 'h2',
-                'class' => array('element-invisible'),
-              ),
-            )); ?>
-          </nav>
-        <?php endif; ?>
+        <div id="secondnav">
+          <?php
+          $tree = menu_tree_all_data('main-menu');
+          print drupal_render(menu_tree_output($tree));
+          ?>
+        </div>
 
         <div id="page-content">
 
