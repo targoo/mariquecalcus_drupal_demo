@@ -1,0 +1,8 @@
+name = Field Timetable
+description = Field Timetable with View integration
+package = Fields
+dependencies[] = field
+dependencies[] = views
+dependencies[] = libraries
+files[] = includes/field_timetable_style_plugin.inc
+core = 7.x

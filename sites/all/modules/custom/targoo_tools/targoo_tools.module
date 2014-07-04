@@ -1,0 +1,19 @@
+<?php
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_page_build().
+ */
+function targoo_tools_page_build(&$page) {
+  $path = drupal_get_path('module', 'targoo_tools');
+
+  $page['page_bottom']['targoo_tools'] = array(
+    '#attached' => array(),
+  );
+  $attached = &$page['page_bottom']['targoo_tools']['#attached'];
+  $options = array('every_page' => TRUE);
+
+  $attached['css'][$path . '/targoo_tools.css'] = $options;
+}

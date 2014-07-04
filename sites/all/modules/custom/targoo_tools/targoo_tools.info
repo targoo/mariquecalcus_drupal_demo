@@ -1,0 +1,4 @@
+name = targoo tools
+description = Targoo tools
+package = Targoo
+core = 7.x
