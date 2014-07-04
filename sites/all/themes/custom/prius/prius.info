@@ -1,0 +1,58 @@
+name = prius
+description = A clean, single or multi-column Zen sub-theme.
+screenshot = screenshot.png
+
+; This theme is compatible with Drupal 7 core and is a Zen sub-theme.
+core = 7.x
+base theme = zen
+
+; Remove the system's menu and message styling since Zen has its own.
+stylesheets[all][] = system.menus.css
+stylesheets[all][] = system.messages.css
+stylesheets[all][] = system.theme.css
+
+; Add our stylesheet.
+stylesheets[all][] = css/prius.css
+stylesheets[all][] = css/mariquecalcus.css
+;stylesheets[all][] = css/styles.css
+
+; Add our JavaScript.
+scripts[] = js/script.js
+
+; Regions.
+regions[header] = Header
+regions[navigation] = Navigation bar
+regions[highlighted] = Highlighted
+regions[help] = Help
+regions[content] = Content
+regions[sidebar_first] = First sidebar
+regions[sidebar_second] = Second sidebar
+regions[footer] = Footer
+regions[bottom] = Page bottom
+
+regions[page_top]       = Page top
+regions[page_bottom]    = Page bottom
+
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = favicon
+features[] = main_menu
+features[] = secondary_menu
+
+; Set the default values of settings on the theme-settings.php form.
+settings[zen_breadcrumb]           = yes
+settings[zen_breadcrumb_separator] = ' › '
+settings[zen_breadcrumb_home]      = 1
+settings[zen_breadcrumb_trailing]  = 0
+settings[zen_breadcrumb_title]     = 1
+settings[zen_skip_link_anchor]     = main-menu
+settings[zen_skip_link_text]       = Jump to navigation
+settings[zen_html5_respond_meta][] = respond
+settings[zen_html5_respond_meta][] = html5
+settings[zen_html5_respond_meta][] = meta
+settings[zen_rebuild_registry]     = 1
+settings[zen_wireframes]           = 0
+settings[prius_max_width] = 1000
