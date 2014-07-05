@@ -62,12 +62,13 @@
             <ul class="action-links"><?php print render($action_links); ?></ul>
           <?php endif; ?>
           <?php print render($page['content']); ?>
-          <?php print $feed_icons; ?>
-          <?php print $breadcrumb; ?>
 
         </div>
 
         <aside id="aside_right">
+          <?php if ($page['sidebar_second']): ?>
+            <?php print render($page['sidebar_second']); ?>
+          <?php endif; ?>
         </aside>
 
       </div>
