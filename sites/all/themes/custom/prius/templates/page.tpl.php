@@ -19,11 +19,11 @@
     <nav id="main-menu" class="navigation" role="navigation">
       <h2 class="visually-hidden">Main menu</h2>
       <ul class="links">
-        <li class="menu-65" data-drupal-link-system-path="about"><a href="/about" title="About us" data-drupal-link-system-path="node/9">About us</a></li>
-        <li class="menu-62" data-drupal-link-system-path="blogs"><a href="/blogs" title="Blogs" data-drupal-link-system-path="blogs">Blogs</a></li>
-        <li class="menu-63" data-drupal-link-system-path="work"><a href="/work" title="Work" data-drupal-link-system-path="work">Work</a></li>
-        <li class="menu-64" data-drupal-link-system-path="contact"><a href="/contact" title="Contact us" data-drupal-link-system-path="contact">Contact</a></li>
-        <li class="menu-64" data-drupal-link-system-path="thelab"><a href="/demo" title="Contact us" data-drupal-link-system-path="contact">The Lab</a></li>
+        <li class="menu-66" data-drupal-link-system-path="node/8"><a href="/services" title="Services" data-drupal-link-system-path="node/8">Services</a></li>
+        <li class="menu-65" data-drupal-link-system-path="works"><a href="/works" title="Work" data-drupal-link-system-path="works">Clients</a></li>
+        <li class="menu-63" data-drupal-link-system-path="blogs"><a href="/blogs" title="Our blogs" data-drupal-link-system-path="blogs">Blog</a></li>
+        <li class="menu-64" data-drupal-link-system-path="contact"><a href="/contact" title="Contact" data-drupal-link-system-path="contact">Contact</a></li>
+        <li class="menu-67-active-trail active" data-drupal-link-system-path="http://www.mariquecalcus.com/demo"><a href="/" title="The lab" class="active-trail active" data-drupal-link-system-path="http://www.mariquecalcus.com/demo">The lab</a></li>
       </ul>
     </nav>
   </header>
@@ -50,17 +50,18 @@
 
         <div id="page-content">
 
+          <?php print render($tabs); ?>
+          <?php print render($page['help']); ?>
+          <?php print $messages; ?>
+          <?php print render($title_suffix); ?>
+          <?php if ($action_links): ?>
+            <ul class="action-links"><?php print render($action_links); ?></ul>
+          <?php endif; ?>
+
           <?php if ($title): ?>
             <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
           <?php endif; ?>
 
-          <?php print render($title_suffix); ?>
-          <?php print $messages; ?>
-          <?php print render($tabs); ?>
-          <?php print render($page['help']); ?>
-          <?php if ($action_links): ?>
-            <ul class="action-links"><?php print render($action_links); ?></ul>
-          <?php endif; ?>
           <?php print render($page['content']); ?>
 
         </div>

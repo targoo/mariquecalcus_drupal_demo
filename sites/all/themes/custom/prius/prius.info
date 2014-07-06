@@ -13,6 +13,7 @@ stylesheets[all][] = system.theme.css
 ; Add our stylesheet.
 stylesheets[all][] = css/prius.css
 stylesheets[all][] = css/mariquecalcus.css
+stylesheets[all][] = css/new.css
 
 ; Add our JavaScript.
 scripts[] = js/script.js
